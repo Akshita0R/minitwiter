@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+    <div class="tweets">
+        {% for tweet in tweets %}
+        <div class="tweet">
+            <h4>@{{ tweet.user }}</h4>
+            <p>{{ tweet.description }}</p>
+            {% if tweet.image %}
+                <img src="{{ tweet.image.url }}" alt="">
+            {% endif %}
+            <p class="datetime">{{ tweet.datetime }}</p>
+        </div>
+        {% empty %}
+                <h2>Your tweets are empty.</h2>
+        {% endfor %}
+    </div>
+{% endblock %}

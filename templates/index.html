@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+        <h2>Hey
+            {% if request.user.is_authenticated %}
+                {{request.user}}
+            {% else %}
+                There
+            {% endif %}
+        </h2>
+    <div class="tweets">
+        {% for tweet in tweets %}
+        <div class="tweet">
+            <h4>@{{ tweet.user }}</h4>
+            <p>{{ tweet.description }}</p>
+            {% if tweet.image %}
+                <img src="{{ tweet.image.url }}" alt="">
+            {% endif %}
+            <p class="datetime">{{ tweet.datetime }}</p>
+        </div>
+        {% empty %}
+            <h2>No tweets yet.</h2>
+        {% endfor %}
+    </div>
+{% endblock %}

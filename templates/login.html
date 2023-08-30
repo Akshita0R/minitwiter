@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<form action="{% url 'login' %}" method="post" class="vhcenter">
+    <h2>Login</h2>
+        {% if message %}
+        <h3>{{ message }}</h3>
+        {% endif %}
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Login">
+    </form>
+{% endblock %}

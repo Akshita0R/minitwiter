@@ -1,0 +1,152 @@
+body {
+    margin: 0px;
+    padding: 0;
+}
+
+* {
+    outline: none;
+    /* border: none; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.tweets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 5px;
+    margin-right: 500px;
+}
+
+.tweet {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    min-width: 300px;
+    padding: 5px;
+    width: 320px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+
+.tweet:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+.tweet img {
+    max-width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+nav {
+    margin-top: -10px;
+    color: black;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+nav img {
+    size: 500px;
+    margin: 20px;
+}
+
+nav h2 {
+    width: fit-content;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+nav div {
+    padding-left: calc(100vw - 500px);
+    background-color: blueviolet;
+}
+
+nav div a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.vhcenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: darkseagreen;
+}
+
+form {
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: fit-content;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form input {
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+form input[type="submit"] {
+    background-color: rgb(110, 110, 255);
+    color: white;
+    padding: 10px;
+}
+
+form ul, span {
+    display: none;
+}
+
+.content {
+    margin-top: 20px;
+    margin: 10px;
+}
+
+.datetime {
+    font-size: 11px;
+    color: #555;
+}
+
+.logo {
+    width: 200px;
+    padding: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.profileform {
+    float: right;
+    width: 300px;
+}
+
+.profileform input[type="file"], label[for="id_profile_pic"] {
+    margin-left: 90px;
+}

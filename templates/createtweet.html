@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block title %}Create Tweet{% endblock %}
+
+{% block content %}
+<form action="/createtweet" method="post" enctype="multipart/form-data" class="vhcenter">
+        <h2>Create Tweet</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Create Tweet">
+    </form>
+{% endblock %}
